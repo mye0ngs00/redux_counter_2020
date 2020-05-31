@@ -6,7 +6,7 @@ const initialState = {
 };
 
 function counter(state = initialState, action){
-    switch(action.types){
+    switch(action.type){
         case types.INCREMENT:
             return {
                 ...state,
@@ -16,9 +16,10 @@ function counter(state = initialState, action){
             return {
                 ...state,
                 number: state.number -1
-            }
+            };
         case types.SET_COLOR:
-            return{
+            console.log(types.SET_COLOR);
+            return {
                 ...state,
                 color: action.color
             };
